@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Card, GridLayout } from '@k2/ui';
+import SalesOverviewAreaChart from '../SalesOverviewAreaChart/SalesOverviewAreaChart';
 
 const TestComponent: React.SFC = () => {
   return <div>HELLO</div>;
@@ -36,7 +37,7 @@ const Dashboard: React.SFC<DashboardProps> = () => {
         </div>
       </GridLayout>
       <Card title="card 1">
-        <div>Hello Man</div>
+        <SalesOverviewAreaChart />
       </Card>
       <Card title="card 2">
         <TestComponent />
