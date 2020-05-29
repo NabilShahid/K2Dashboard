@@ -17,8 +17,7 @@ const SalesOverviewAreaChart: React.SFC<SalesOverviewAreaChartProps> = () => {
     });
   }, []);
   return (
-    <Card bodyPadding="16px 20px 0px" height="300px" width="1053px">
-      <React.Fragment key=".0">
+ 
         <AreaChart
           area={{
             title: <strong>Sales Overview</strong>,
@@ -105,8 +104,7 @@ const SalesOverviewAreaChart: React.SFC<SalesOverviewAreaChartProps> = () => {
             ],
           }}
         />
-      </React.Fragment>
-    </Card>
+     
   );
 };
 
