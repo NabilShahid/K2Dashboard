@@ -16,10 +16,21 @@ export type BarChartDataPoint = {
 
 export type BarChartDataUnit = {
   color: string;
-  data: BarChartDataPoint;
+  data: Array<BarChartDataPoint>;
   name: string;
 };
 export type PieChartDataUnit = {
   label: string;
   value: string;
+};
+
+export type LineChartDataPoint = {
+  x: number;
+  y: number;
+};
+
+export type LineChartDataUnit = {
+  color: string;
+  curve: string;
+  data: Array<LineChartDataPoint>;
 };

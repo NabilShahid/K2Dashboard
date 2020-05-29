@@ -5,4 +5,5 @@ export enum APIS{
     BrandEngagementOverviewChartData='/api/data/column',
     BrandEngagementByRegionChartData='/api/data/column2',
     TopRevenueByRegionChartData='/api/data/pie',
+    RevenueTrendByRegionChartData='/api/data/line',
 }

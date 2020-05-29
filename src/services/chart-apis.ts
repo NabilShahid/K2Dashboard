@@ -30,3 +30,9 @@ export const getTopRevenueByRegionChartData = async () => {
   );
   return result;
 };
+export const getRevenueTrendByRegionChartData = async () => {
+  const result = await performGetRequest(
+    API_BASE_URL + APIS.RevenueTrendByRegionChartData
+  );
+  return result;
+};
