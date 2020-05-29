@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AreaChart } from '@k2/rv-viz';
-import { getSalesOverviewChartData } from '../../services/chart-apis';
-import { AreaChartDataUnit } from '../../types/chart-data-types';
+ import { AreaChartDataUnit } from '../../types/chart-data-types';
+import { retrieveSalesOverviewChartData } from '../../services/chart-data-service';
 
 export interface SalesOverviewChartProps {}
 
@@ -10,7 +10,7 @@ const SalesOverviewChart: React.SFC<SalesOverviewChartProps> = () => {
     []
   );
   React.useEffect(() => {
-    getSalesOverviewChartData().then((data) => {
+    retrieveSalesOverviewChartData().then((data) => {
       setData(data);
       console.log(data);
     });

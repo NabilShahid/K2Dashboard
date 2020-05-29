@@ -20,7 +20,7 @@ const BestSellerChart: React.SFC<BestSellerChartProps> = () => {
       bar={{
         barWidth: 0.15,
         stacking: true,
-        title: <strong>Heading</strong>,
+        title: <strong>Top 5 Best Sellers</strong>,
       }}
       
       colors={{
