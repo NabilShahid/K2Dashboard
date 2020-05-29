@@ -6,7 +6,7 @@ import { Theme } from '@k2/utils';
 function App() {
   return (
     <div className="App">
-      <header>Header</header>
+      <header className="App-main-header">Header</header>
       <Theme.ThemeProvider>
         <Dashboard />
       </Theme.ThemeProvider>
