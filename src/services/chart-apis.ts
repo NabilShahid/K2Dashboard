@@ -6,3 +6,9 @@ export const getSalesOverviewChartData = async () => {
   );
   return result;
 };
+export const getBestSellersChartData = async () => {
+  const result = await performGetRequest(
+    API_BASE_URL + APIS.BestSellersChartData
+  );
+  return result;
+};

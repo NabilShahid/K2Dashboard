@@ -1,9 +1,20 @@
 import * as React from 'react';
 import { BarChart } from '@k2/rv-viz';
+import { getBestSellersChartData } from '../../services/chart-apis';
+import { BarChartDataUnit } from '../../types/chart-data-types';
 
-export interface BesSellerChartProps {}
+export interface BestSellerChartProps {}
 
-const BesSellerChart: React.SFC<BesSellerChartProps> = () => {
+const BestSellerChart: React.SFC<BestSellerChartProps> = () => {
+    const [data, setData]: [Array<BarChartDataUnit>, Function] = React.useState(
+        []
+      );
+    React.useEffect(() => {
+        getBestSellersChartData().then((data) => {
+          setData(data);
+          console.log(data);
+        });
+      }, []);
   return (
     <BarChart
       bar={{
@@ -16,55 +27,56 @@ const BesSellerChart: React.SFC<BesSellerChartProps> = () => {
         dark: ['#6098f3'],
         light: ['#6098f3'],
       }}
-      data={[
-        {
-          color: '#7bba3c',
-          data: [
-            {
-              labelColor: '#777777',
-              x: 20.5,
-              y: 'Critical',
-            },
-          ],
-          name: 'Critical',
-        },
-        {
-          color: '#7bba3c',
-          data: [
-            {
-              labelColor: '#777777',
-              x: 3.5,
-              y: 'High',
-            },
-          ],
-          name: 'High',
-        },
-        {
-          color: '#7bba3c',
-          data: [
-            {
-              labelColor: '#777777',
-              x: 78.55,
-              y: 'Mid',
-            },
-          ],
-          name: 'Mid',
-        },
-        {
-          color: '#7bba3c',
-          data: [
-            {
-              labelColor: '#777777',
-              x: 10.55,
-              y: 'Low',
-            },
-          ],
-          name: 'Low',
-        },
-      ]}
+      data={data}
+    //   data={[
+    //     {
+    //       color: '#7bba3c',
+    //       data: [
+    //         {
+    //           labelColor: '#777777',
+    //           x: 20.5,
+    //           y: 'Critical',
+    //         },
+    //       ],
+    //       name: 'Critical',
+    //     },
+    //     {
+    //       color: '#7bba3c',
+    //       data: [
+    //         {
+    //           labelColor: '#777777',
+    //           x: 3.5,
+    //           y: 'High',
+    //         },
+    //       ],
+    //       name: 'High',
+    //     },
+    //     {
+    //       color: '#7bba3c',
+    //       data: [
+    //         {
+    //           labelColor: '#777777',
+    //           x: 78.55,
+    //           y: 'Mid',
+    //         },
+    //       ],
+    //       name: 'Mid',
+    //     },
+    //     {
+    //       color: '#7bba3c',
+    //       data: [
+    //         {
+    //           labelColor: '#777777',
+    //           x: 10.55,
+    //           y: 'Low',
+    //         },
+    //       ],
+    //       name: 'Low',
+    //     },
+    //   ]}
       labels={{
         enabled: true,
-        formatter: function noRefCheck(e:any) {return e+"xx"},
+        formatter: function noRefCheck(e:any) {console.log(e);return e.x+"k"},
       }}
       legends={{
         enabled: false,
@@ -94,4 +106,4 @@ const BesSellerChart: React.SFC<BesSellerChartProps> = () => {
   );
 };
 
-export default BesSellerChart;
+export default BestSellerChart;

@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Card, GridLayout } from '@k2/ui';
 import SalesOverviewChart from '../SalesOverviewChart/SalesOverviewChart';
-import BesSellerChart from '../BestSellersChart/BestSellersChart';
+import BestSellerChart from '../BestSellersChart/BestSellersChart';
+import BestSellerChart2 from '../BestSellersChart2/BestSellersChart2';
 
 export interface DashboardProps {}
 
@@ -13,7 +14,7 @@ const Dashboard: React.SFC<DashboardProps> = () => {
           <SalesOverviewChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
-          <BesSellerChart />
+          <BestSellerChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
           <div>Card 3</div>
@@ -34,18 +35,8 @@ const Dashboard: React.SFC<DashboardProps> = () => {
           <div>Card 8</div>
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
-          <div>Card 9</div>
+          <BestSellerChart2 />
         </Card>
-
-        {/* <Card hasBoxShadow heightUnits={2} widthUnits={2}>
-          <SalesOverviewAreaChart />
-        </Card>
-        <Card hasBoxShadow heightUnits={2}>
-          <div>Card 2</div>
-        </Card>
-        <Card hasBoxShadow heightUnits={2} widthUnits={2}>
-          <SalesOverviewAreaChart />
-        </Card> */}
       </GridLayout>
     </>
   );
