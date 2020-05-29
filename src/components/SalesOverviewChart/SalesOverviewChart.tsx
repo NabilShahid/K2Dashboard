@@ -4,9 +4,9 @@ import { AreaChart } from '@k2/rv-viz';
 import { getSalesOverviewChartData } from '../../services/chart-apis';
 import { AreaChartDataPoint } from '../../types/chart-data-types';
 
-export interface SalesOverviewAreaChartProps {}
+export interface SalesOverviewChartProps {}
 
-const SalesOverviewAreaChart: React.SFC<SalesOverviewAreaChartProps> = () => {
+const SalesOverviewChart: React.SFC<SalesOverviewChartProps> = () => {
   const [data, setData]: [Array<AreaChartDataPoint>, Function] = React.useState(
     []
   );
@@ -108,4 +108,4 @@ const SalesOverviewAreaChart: React.SFC<SalesOverviewAreaChartProps> = () => {
   );
 };
 
-export default SalesOverviewAreaChart;
+export default SalesOverviewChart;

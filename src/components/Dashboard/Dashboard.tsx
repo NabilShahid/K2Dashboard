@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Card, GridLayout } from '@k2/ui';
-import SalesOverviewAreaChart from '../SalesOverviewAreaChart/SalesOverviewAreaChart';
+import SalesOverviewChart from '../SalesOverviewChart/SalesOverviewChart';
+import BesSellerChart from '../BestSellersChart/BestSellersChart';
 
 export interface DashboardProps {}
 
@@ -9,10 +10,10 @@ const Dashboard: React.SFC<DashboardProps> = () => {
     <>
       <GridLayout isDraggable rowHeight={150} width="100%" noOfCols={3}>
         <Card hasBoxShadow widthUnits={2} heightUnits={2}>
-          <SalesOverviewAreaChart />
+          <SalesOverviewChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
-          <div>Card 2</div>
+          <BesSellerChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
           <div>Card 3</div>
