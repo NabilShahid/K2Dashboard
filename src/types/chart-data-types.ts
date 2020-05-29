@@ -19,3 +19,7 @@ export type BarChartDataUnit = {
   data: BarChartDataPoint;
   name: string;
 };
+export type PieChartDataUnit = {
+  label: string;
+  value: string;
+};

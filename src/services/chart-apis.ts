@@ -24,3 +24,9 @@ export const getBrandEngagementByRegionChartData = async () => {
   );
   return result;
 };
+export const getTopRevenueByRegionChartData = async () => {
+  const result = await performGetRequest(
+    API_BASE_URL + APIS.TopRevenueByRegionChartData
+  );
+  return result;
+};

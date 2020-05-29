@@ -4,7 +4,6 @@ import SalesOverviewChart from '../SalesOverviewChart/SalesOverviewChart';
 import BestSellerChart from '../BestSellersChart/BestSellersChart';
 import BestSellerChart2 from '../BestSellersChart2/BestSellersChart2';
 import BrandEngagementOverviewChart from '../BrandEngagementOverviewChart/BrandEngagementOverviewChart';
-import { getBrandEngagementByRegionChartData } from '../../services/chart-apis';
 import BrandEngagementByRegionChart from '../BrandEngagementByRegionChart/BrandEngagementByRegionChart';
 import TopRevenueByRegion from '../TopRevenueByRegionChart/TopRevenueByRegionChart';
 
