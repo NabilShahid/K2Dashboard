@@ -6,6 +6,7 @@ import BestSellerChart2 from '../BestSellersChart2/BestSellersChart2';
 import BrandEngagementOverviewChart from '../BrandEngagementOverviewChart/BrandEngagementOverviewChart';
 import { getBrandEngagementByRegionChartData } from '../../services/chart-apis';
 import BrandEngagementByRegionChart from '../BrandEngagementByRegionChart/BrandEngagementByRegionChart';
+import TopRevenueByRegion from '../TopRevenueByRegionChart/TopRevenueByRegionChart';
 
 export interface DashboardProps {}
 
@@ -26,7 +27,7 @@ const Dashboard: React.SFC<DashboardProps> = () => {
           <BrandEngagementByRegionChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
-          <div>Card 5</div>
+         <TopRevenueByRegion />
         </Card>
         <Card hasBoxShadow widthUnits={2} heightUnits={2}>
           <div>Card 6</div>

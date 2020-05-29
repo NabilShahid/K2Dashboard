@@ -17,8 +17,9 @@ const BrandEngagementByRegionChart: React.SFC<BrandEngagementByRegionChartProps>
   }, []);
   return (
     <ColumnChart
-      column={{
+    column={{
         barWidth: 0.2,
+        title: <strong>Brand Engagement By Region</strong>,
       }}
       data={data}
       horizontalGridLine={{
