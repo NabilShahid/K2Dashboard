@@ -6,28 +6,27 @@ import { retrieveTopRevenueByRegionChartData } from '../../services/chart-data-s
 export interface TopRevenueByRegionProps {}
 
 const TopRevenueByRegion: React.SFC<TopRevenueByRegionProps> = () => {
-    const [data, setData]: [Array<PieChartDataUnit>, Function] = React.useState(
-        []
-      );
-    React.useEffect(() => {
-        retrieveTopRevenueByRegionChartData().then((data) => {
-          setData(data);
-         });
-      }, []);
+  const [data, setData]: [Array<PieChartDataUnit>, Function] = React.useState(
+    []
+  );
+  React.useEffect(() => {
+    retrieveTopRevenueByRegionChartData().then((data) => {
+      setData(data);
+    });
+  }, []);
   return (
     <PieChart
-    pie={{
+      pie={{
         title: <strong>Top Revenue By Region</strong>,
       }}
       colors={{
-        dark: ['#6ab04c', '#f1bf43', '#e77355'],
-        light: ['#6ab04c', '#f1bf43', '#e77355'],
+        dark: ['#1790c8', '#45a6d3', '#8ac7e3'],
+        light: ['#1790c8', '#45a6d3', '#8ac7e3'],
       }}
       data={data}
       labels={{
-        centerLabel: 'Total Hits',
-        centerValue: <strong>90</strong>,
-        radialLabelFormatter: function noRefCheck() {},
+        centerLabel: 'Total Revenue',
+        centerValue: <strong>900k</strong>,
         showCenterValue: true,
         showRadialLabels: true,
       }}
@@ -35,7 +34,7 @@ const TopRevenueByRegion: React.SFC<TopRevenueByRegionProps> = () => {
         showLegends: false,
       }}
       radial={{
-        anglePadding: 1,
+        anglePadding: 2,
         innerRadius: 0.75,
       }}
     />
