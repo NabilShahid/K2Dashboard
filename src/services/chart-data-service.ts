@@ -1,4 +1,4 @@
-import { getSalesOverviewChartData, getBestSellersChartData, getBrandEngagementOverviewChartData } from './chart-apis';
+import { getSalesOverviewChartData, getBestSellersChartData, getBrandEngagementOverviewChartData, getBrandEngagementByRegionChartData } from './chart-apis';
 export const retrieveSalesOverviewChartData = async () => {
   const result = await getSalesOverviewChartData();
   return result;
@@ -9,5 +9,9 @@ export const retrievegetBestSellersChartData = async () => {
 };
 export const retrieveBrandEngagementOverviewChartData = async () => {
   const result = await getBrandEngagementOverviewChartData();
+  return result;
+};
+export const retrieveBrandEngagementByRegionChartData = async () => {
+  const result = await getBrandEngagementByRegionChartData();
   return result;
 };

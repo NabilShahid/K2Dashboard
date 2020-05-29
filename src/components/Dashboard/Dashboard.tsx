@@ -3,7 +3,9 @@ import { Card, GridLayout } from '@k2/ui';
 import SalesOverviewChart from '../SalesOverviewChart/SalesOverviewChart';
 import BestSellerChart from '../BestSellersChart/BestSellersChart';
 import BestSellerChart2 from '../BestSellersChart2/BestSellersChart2';
-import BrandEngagementOverview from '../BrandEngagementOverviewChart/BrandEngagementOverviewChart';
+import BrandEngagementOverviewChart from '../BrandEngagementOverviewChart/BrandEngagementOverviewChart';
+import { getBrandEngagementByRegionChartData } from '../../services/chart-apis';
+import BrandEngagementByRegionChart from '../BrandEngagementByRegionChart/BrandEngagementByRegionChart';
 
 export interface DashboardProps {}
 
@@ -18,10 +20,10 @@ const Dashboard: React.SFC<DashboardProps> = () => {
           <BestSellerChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
-          <BrandEngagementOverview />
+          <BrandEngagementOverviewChart />
         </Card>
         <Card hasBoxShadow widthUnits={2} heightUnits={2}>
-          <div>Card 4</div>
+          <BrandEngagementByRegionChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
           <div>Card 5</div>

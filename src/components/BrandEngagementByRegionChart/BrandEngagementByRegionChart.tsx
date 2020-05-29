@@ -1,24 +1,24 @@
 import * as React from 'react';
 import { ColumnChart } from '@k2/rv-viz';
-import { retrieveBrandEngagementOverviewChartData } from '../../services/chart-data-service';
 import { ColumnChartDataUnit } from '../../types/chart-data-types';
-export interface BrandEngagementOverviewChartProps {}
+import { retrieveBrandEngagementByRegionChartData } from '../../services/chart-data-service';
 
-const BrandEngagementOverviewChart: React.SFC<BrandEngagementOverviewChartProps> = () => {
-    const [data, setData]: [Array<ColumnChartDataUnit>, Function] = React.useState(
-        []
-      );
-    React.useEffect(() => {
-        retrieveBrandEngagementOverviewChartData().then((data) => {
-          setData(data);
-          console.log(data);
-        });
-      }, []);
+export interface BrandEngagementByRegionChartProps {}
+
+const BrandEngagementByRegionChart: React.SFC<BrandEngagementByRegionChartProps> = () => {
+  const [data, setData]: [
+    Array<ColumnChartDataUnit>,
+    Function
+  ] = React.useState([]);
+  React.useEffect(() => {
+    retrieveBrandEngagementByRegionChartData().then((data) => {
+      setData(data);
+    });
+  }, []);
   return (
     <ColumnChart
       column={{
-        barWidth: 0.1,
-        title: <strong>Brand Engagement Overview</strong>,
+        barWidth: 0.2,
       }}
       data={data}
       horizontalGridLine={{
@@ -26,7 +26,7 @@ const BrandEngagementOverviewChart: React.SFC<BrandEngagementOverviewChartProps>
         tickTotal: 2,
       }}
       legends={{
-        enabled: false,
+        position: 'flex-end',
       }}
       tooltip={{
         tooltipComponent: function noRefCheck() {},
@@ -53,4 +53,4 @@ const BrandEngagementOverviewChart: React.SFC<BrandEngagementOverviewChartProps>
   );
 };
 
-export default BrandEngagementOverviewChart;
+export default BrandEngagementByRegionChart;

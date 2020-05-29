@@ -18,3 +18,9 @@ export const getBrandEngagementOverviewChartData = async () => {
   );
   return result;
 };
+export const getBrandEngagementByRegionChartData = async () => {
+  const result = await performGetRequest(
+    API_BASE_URL + APIS.BrandEngagementByRegionChartData
+  );
+  return result;
+};
