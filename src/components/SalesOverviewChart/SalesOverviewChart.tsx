@@ -12,8 +12,7 @@ const SalesOverviewChart: React.SFC<SalesOverviewChartProps> = () => {
   React.useEffect(() => {
     retrieveSalesOverviewChartData().then((data) => {
       setData(data);
-      console.log(data);
-    });
+     });
   }, []);
   return (
     <AreaChart

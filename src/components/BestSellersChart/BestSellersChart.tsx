@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { BarChart } from '@k2/rv-viz';
-import { getBestSellersChartData } from '../../services/chart-apis';
 import { BarChartDataUnit } from '../../types/chart-data-types';
+import { retrievegetBestSellersChartData } from '../../services/chart-data-service';
 
 export interface BestSellerChartProps {}
 
 const BestSellerChart: React.SFC<BestSellerChartProps> = () => {
-    const [data, setData]: [Array<BarChartDataUnit>, Function] = React.useState(
-        []
-      );
-    React.useEffect(() => {
-        getBestSellersChartData().then((data) => {
-          setData(data);
-          console.log(data);
-        });
-      }, []);
+  const [data, setData]: [Array<BarChartDataUnit>, Function] = React.useState(
+    []
+  );
+  React.useEffect(() => {
+    retrievegetBestSellersChartData().then((data) => {
+      setData(data);
+      console.log(data);
+    });
+  }, []);
   return (
     <BarChart
       bar={{
@@ -22,66 +22,67 @@ const BestSellerChart: React.SFC<BestSellerChartProps> = () => {
         stacking: true,
         title: <strong>Top 5 Best Sellers</strong>,
       }}
-      
       colors={{
         dark: ['#6098f3'],
         light: ['#6098f3'],
       }}
       data={data}
-    //   data={[
-    //     {
-    //       color: '#7bba3c',
-    //       data: [
-    //         {
-    //           labelColor: '#777777',
-    //           x: 20.5,
-    //           y: 'Critical',
-    //         },
-    //       ],
-    //       name: 'Critical',
-    //     },
-    //     {
-    //       color: '#7bba3c',
-    //       data: [
-    //         {
-    //           labelColor: '#777777',
-    //           x: 3.5,
-    //           y: 'High',
-    //         },
-    //       ],
-    //       name: 'High',
-    //     },
-    //     {
-    //       color: '#7bba3c',
-    //       data: [
-    //         {
-    //           labelColor: '#777777',
-    //           x: 78.55,
-    //           y: 'Mid',
-    //         },
-    //       ],
-    //       name: 'Mid',
-    //     },
-    //     {
-    //       color: '#7bba3c',
-    //       data: [
-    //         {
-    //           labelColor: '#777777',
-    //           x: 10.55,
-    //           y: 'Low',
-    //         },
-    //       ],
-    //       name: 'Low',
-    //     },
-    //   ]}
+      //   data={[
+      //     {
+      //       color: '#7bba3c',
+      //       data: [
+      //         {
+      //           labelColor: '#777777',
+      //           x: 20.5,
+      //           y: 'Critical',
+      //         },
+      //       ],
+      //       name: 'Critical',
+      //     },
+      //     {
+      //       color: '#7bba3c',
+      //       data: [
+      //         {
+      //           labelColor: '#777777',
+      //           x: 3.5,
+      //           y: 'High',
+      //         },
+      //       ],
+      //       name: 'High',
+      //     },
+      //     {
+      //       color: '#7bba3c',
+      //       data: [
+      //         {
+      //           labelColor: '#777777',
+      //           x: 78.55,
+      //           y: 'Mid',
+      //         },
+      //       ],
+      //       name: 'Mid',
+      //     },
+      //     {
+      //       color: '#7bba3c',
+      //       data: [
+      //         {
+      //           labelColor: '#777777',
+      //           x: 10.55,
+      //           y: 'Low',
+      //         },
+      //       ],
+      //       name: 'Low',
+      //     },
+      //   ]}
       labels={{
         enabled: true,
-        formatter: function noRefCheck(e:any) {console.log(e);return e.x+"k"},
+        formatter: function noRefCheck(e: any) {
+          console.log(e);
+          return e.x + 'k';
+        },
       }}
       legends={{
         enabled: false,
       }}
-      
       xAxis={{
         style: {
           strokeWidth: 0.5,

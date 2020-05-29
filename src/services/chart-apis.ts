@@ -12,3 +12,9 @@ export const getBestSellersChartData = async () => {
   );
   return result;
 };
+export const getBrandEngagementOverviewChartData = async () => {
+  const result = await performGetRequest(
+    API_BASE_URL + APIS.BrandEngagementOverviewChartData
+  );
+  return result;
+};

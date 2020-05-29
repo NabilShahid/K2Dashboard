@@ -3,14 +3,19 @@ export type AreaChartDataUnit = {
   y: number;
 };
 
+export type ColumnChartDataUnit = {
+  x: number;
+  y: string;
+};
+
 export type BarChartDataPoint = {
   labelColor: string;
   x: number;
-  y: number;
+  y: string;
 };
 
 export type BarChartDataUnit = {
   color: string;
   data: BarChartDataPoint;
-  name: number;
+  name: string;
 };
