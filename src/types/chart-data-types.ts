@@ -34,3 +34,20 @@ export type LineChartDataUnit = {
   curve: string;
   data: Array<LineChartDataPoint>;
 };
+
+export type SankeyChartNode = {
+  id: string;
+  sourceId: string;
+  targetId: string;
+  value: number;
+};
+export type SankeyChartLink = {
+  id: string;
+  label: string;
+  level: string;
+};
+
+export type SankeyChartData = {
+  nodes: Array<SankeyChartNode>;
+  links: Array<SankeyChartLink>;
+};
