@@ -51,3 +51,9 @@ export type SankeyChartData = {
   nodes: Array<SankeyChartNode>;
   links: Array<SankeyChartLink>;
 };
+
+export type BubbleChartDataUnit = {
+  color: string;
+  name: string;
+  value: string;
+};

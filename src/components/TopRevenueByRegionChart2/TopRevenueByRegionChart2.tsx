@@ -1,36 +1,27 @@
 import * as React from 'react';
 import { BubbleChart } from '@k2/d3-viz';
+import { BubbleChartDataUnit } from '../../types/chart-data-types';
+import { retrieveTopRevenueByRegion2ChartData } from '../../services/chart-data-service';
 
 export interface TopRevenueByRegionChart2Props {}
 
 const TopRevenueByRegionChart2: React.SFC<TopRevenueByRegionChart2Props> = () => {
+  const [data, setData]: [
+    Array<BubbleChartDataUnit>,
+    Function
+  ] = React.useState([]);
+  React.useEffect(() => {
+    retrieveTopRevenueByRegion2ChartData().then((data) => {
+      setData(data);
+      console.log(data);
+    });
+  }, []);
   return (
     <BubbleChart
       bubble={{
-        title: <strong>Heading</strong>,
+        title: <strong>Top Revenue By Region</strong>,
       }}
-      data={[
-        {
-          color: '#f29d56',
-          name: 'Android',
-          value: 20,
-        },
-        {
-          color: '#b177bb',
-          name: 'A.Tablet',
-          value: 27,
-        },
-        {
-          color: '#30b1d9',
-          name: 'iPhone',
-          value: 90,
-        },
-        {
-          color: '#6ab04c',
-          name: 'iPad',
-          value: 65,
-        },
-      ]}
+      data={data}
       labels={{
         labelStyles: {
           fill: 'white',

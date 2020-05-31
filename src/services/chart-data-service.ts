@@ -6,6 +6,7 @@ import {
   getTopRevenueByRegionChartData,
   getRevenueTrendByRegionChartData,
   getProductSalesByRegionChartData,
+  getTopRevenueByRegion2ChartData,
 } from './chart-apis';
 export const retrieveSalesOverviewChartData = async () => {
   const result = await getSalesOverviewChartData();
@@ -25,6 +26,10 @@ export const retrieveBrandEngagementByRegionChartData = async () => {
 };
 export const retrieveTopRevenueByRegionChartData = async () => {
   const result = await getTopRevenueByRegionChartData();
+  return result;
+};
+export const retrieveTopRevenueByRegion2ChartData = async () => {
+  const result = await getTopRevenueByRegion2ChartData();
   return result;
 };
 export const retrieveRevenueTrendByRegionChartData = async () => {
