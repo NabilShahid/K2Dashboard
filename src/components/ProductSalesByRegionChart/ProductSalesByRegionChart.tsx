@@ -15,21 +15,26 @@ const ProductSalesByRegionChart: React.SFC<ProductSalesByRegionChartProps> = () 
     });
   }, []);
   return (
-    <SankeyChart
-      data={data}
-      linkColor="#30b1d9"
-      linkMode="default"
-      nodeColorScheme={['#f6f6f6']}
-      nodeShape="rect"
-      nodeWidth={25}
-      sankeyStyle={{
-        nodeStyle: {
-          stroke: 'white',
-          strokeOpacity: 1,
-          strokeWidth: 1.5,
-        },
-      }}
-    />
+    <>
+      <div style={{ textAlign: 'left' }}>
+        <strong>Product Sales By Region</strong>
+      </div>
+      <SankeyChart
+        data={data}
+        linkColor="#30b1d9"
+        linkMode="default"
+        nodeColorScheme={['#f6f6f6']}
+        nodeShape="rect"
+        nodeWidth={25}
+        sankeyStyle={{
+          nodeStyle: {
+            stroke: 'white',
+            strokeOpacity: 1,
+            strokeWidth: 1.5,
+          },
+        }}
+      />
+    </>
   );
 };
 
