@@ -10,8 +10,7 @@ const BrandEngagementOverviewChart: React.SFC = () => {
     React.useEffect(() => {
         retrieveBrandEngagementOverviewChartData().then((data) => {
           setData(data);
-          console.log(data);
-        });
+         });
       }, []);
   return (
     <ColumnChart

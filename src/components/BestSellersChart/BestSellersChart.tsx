@@ -10,8 +10,7 @@ const BestSellerChart: React.SFC = () => {
   React.useEffect(() => {
     retrievegetBestSellersChartData().then((data) => {
       setData(data);
-      console.log(data);
-    });
+     });
   }, []);
   return (
     <BarChart
@@ -28,8 +27,7 @@ const BestSellerChart: React.SFC = () => {
       labels={{
         enabled: true,
         formatter: function noRefCheck(e: any) {
-          console.log(e);
-          return e.x + 'k';
+           return e.x + 'k';
         },
       }}
       legends={{

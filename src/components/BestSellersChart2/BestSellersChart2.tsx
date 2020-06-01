@@ -27,8 +27,7 @@ const BestSellerChart2: React.SFC = () => {
       labels={{
         enabled: true,
         formatter: function noRefCheck(e: any) {
-          console.log(e);
-          return e.x + '%';
+           return e.x + '%';
         },
       }}
       legends={{

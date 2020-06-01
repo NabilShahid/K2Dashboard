@@ -11,8 +11,7 @@ const TopRevenueByRegionChart2: React.SFC = () => {
   React.useEffect(() => {
     retrieveTopRevenueByRegion2ChartData().then((data) => {
       setData(data);
-      console.log(data);
-    });
+     });
   }, []);
   return (
     <BubbleChart
