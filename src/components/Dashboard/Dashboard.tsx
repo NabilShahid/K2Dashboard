@@ -13,7 +13,7 @@ import TopRevenueByRegionChart2 from '../TopRevenueByRegionChart2/TopRevenueByRe
 const Dashboard: React.SFC = () => {
   return (
     <>
-      <div style={{ textAlign: 'right', padding: '7px 10px 7px 0px' }}>
+      <div style={{ textAlign: 'left', padding: '10px 0px 7px 10px' }}>
         <ToggleTheme />
       </div>
       <GridLayout isDraggable rowHeight={150} width="100%" noOfCols={3}>
