@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, GridLayout } from '@k2/ui';
+import { Card, GridLayout, ToggleTheme } from '@k2/ui';
 import SalesOverviewChart from '../SalesOverviewChart/SalesOverviewChart';
 import BestSellerChart from '../BestSellersChart/BestSellersChart';
 import BestSellerChart2 from '../BestSellersChart2/BestSellersChart2';
@@ -15,6 +15,9 @@ export interface DashboardProps {}
 const Dashboard: React.SFC<DashboardProps> = () => {
   return (
     <>
+      <div style={{textAlign:'right',padding:'7px 10px 7px 0px'}}>
+        <ToggleTheme />
+      </div>
       <GridLayout isDraggable rowHeight={150} width="100%" noOfCols={3}>
         <Card hasBoxShadow widthUnits={2} heightUnits={2}>
           <SalesOverviewChart />
@@ -29,7 +32,7 @@ const Dashboard: React.SFC<DashboardProps> = () => {
           <BrandEngagementByRegionChart />
         </Card>
         <Card hasBoxShadow widthUnits={1} heightUnits={2}>
-         <TopRevenueByRegion />
+          <TopRevenueByRegion />
         </Card>
         <Card hasBoxShadow widthUnits={2} heightUnits={2}>
           <RevenueTrendByRegionChart />
