@@ -10,8 +10,7 @@ const BestSellerChart2: React.SFC = () => {
   React.useEffect(() => {
     retrievegetBestSellersChartData().then((data) => {
       setData(data);
-      console.log(data);
-    });
+     });
   }, []);
   return (
     <BarChart
@@ -24,53 +23,7 @@ const BestSellerChart2: React.SFC = () => {
         dark: ['#6098f3'],
         light: ['#6098f3'],
       }}
-      data={data}
-      //   data={[
-      //     {
-      //       color: '#7bba3c',
-      //       data: [
-      //         {
-      //           labelColor: '#777777',
-      //           x: 20.5,
-      //           y: 'Critical',
-      //         },
-      //       ],
-      //       name: 'Critical',
-      //     },
-      //     {
-      //       color: '#7bba3c',
-      //       data: [
-      //         {
-      //           labelColor: '#777777',
-      //           x: 3.5,
-      //           y: 'High',
-      //         },
-      //       ],
-      //       name: 'High',
-      //     },
-      //     {
-      //       color: '#7bba3c',
-      //       data: [
-      //         {
-      //           labelColor: '#777777',
-      //           x: 78.55,
-      //           y: 'Mid',
-      //         },
-      //       ],
-      //       name: 'Mid',
-      //     },
-      //     {
-      //       color: '#7bba3c',
-      //       data: [
-      //         {
-      //           labelColor: '#777777',
-      //           x: 10.55,
-      //           y: 'Low',
-      //         },
-      //       ],
-      //       name: 'Low',
-      //     },
-      //   ]}
+      data={data}   
       labels={{
         enabled: true,
         formatter: function noRefCheck(e: any) {
