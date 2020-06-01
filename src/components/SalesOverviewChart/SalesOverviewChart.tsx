@@ -31,16 +31,20 @@ const SalesOverviewChart: React.SFC = () => {
           },
         },
       }}
-      data={[
-        {
-          color: '#5579ae',
-          curve: 'curveMonotoneX',
-          data,
-          name: 'Sales',
-          opacity: 0.2,
-          stroke: '#5579ae',
-        },
-      ]}
+      data={
+        data.length > 0
+          ? [
+              {
+                color: '#5579ae',
+                curve: 'curveMonotoneX',
+                data,
+                name: 'Sales',
+                opacity: 0.2,
+                stroke: '#5579ae',
+              },
+            ]
+          : []
+      }
       horizontalGridLine={{
         enabled: true,
         tickValues: [10, 20],
