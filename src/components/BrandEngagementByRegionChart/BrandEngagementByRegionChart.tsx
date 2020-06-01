@@ -3,9 +3,7 @@ import { ColumnChart } from '@k2/rv-viz';
 import { ColumnChartDataUnit } from '../../types/chart-data-types';
 import { retrieveBrandEngagementByRegionChartData } from '../../services/chart-data-service';
 
-export interface BrandEngagementByRegionChartProps {}
-
-const BrandEngagementByRegionChart: React.SFC<BrandEngagementByRegionChartProps> = () => {
+const BrandEngagementByRegionChart: React.SFC = () => {
   const [data, setData]: [
     Array<Array<ColumnChartDataUnit>>,
     Function

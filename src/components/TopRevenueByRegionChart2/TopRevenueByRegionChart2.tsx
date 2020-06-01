@@ -3,9 +3,7 @@ import { BubbleChart } from '@k2/d3-viz';
 import { BubbleChartDataUnit } from '../../types/chart-data-types';
 import { retrieveTopRevenueByRegion2ChartData } from '../../services/chart-data-service';
 
-export interface TopRevenueByRegionChart2Props {}
-
-const TopRevenueByRegionChart2: React.SFC<TopRevenueByRegionChart2Props> = () => {
+const TopRevenueByRegionChart2: React.SFC = () => {
   const [data, setData]: [
     Array<BubbleChartDataUnit>,
     Function

@@ -1,18 +1,16 @@
 import * as React from 'react';
 import { AreaChart } from '@k2/rv-viz';
- import { AreaChartDataUnit } from '../../types/chart-data-types';
+import { AreaChartDataUnit } from '../../types/chart-data-types';
 import { retrieveSalesOverviewChartData } from '../../services/chart-data-service';
 
-export interface SalesOverviewChartProps {}
-
-const SalesOverviewChart: React.SFC<SalesOverviewChartProps> = () => {
+const SalesOverviewChart: React.SFC = () => {
   const [data, setData]: [Array<AreaChartDataUnit>, Function] = React.useState(
     []
   );
   React.useEffect(() => {
     retrieveSalesOverviewChartData().then((data) => {
       setData(data);
-     });
+    });
   }, []);
   return (
     <AreaChart

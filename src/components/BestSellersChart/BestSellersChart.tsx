@@ -3,9 +3,7 @@ import { BarChart } from '@k2/rv-viz';
 import { BarChartDataUnit } from '../../types/chart-data-types';
 import { retrievegetBestSellersChartData } from '../../services/chart-data-service';
 
-export interface BestSellerChartProps {}
-
-const BestSellerChart: React.SFC<BestSellerChartProps> = () => {
+const BestSellerChart: React.SFC = () => {
   const [data, setData]: [Array<BarChartDataUnit>, Function] = React.useState(
     []
   );

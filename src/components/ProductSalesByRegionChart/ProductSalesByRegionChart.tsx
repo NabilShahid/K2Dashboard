@@ -2,9 +2,8 @@ import * as React from 'react';
 import { SankeyChart } from '@k2/d3-viz';
 import { SankeyChartData } from '../../types/chart-data-types';
 import { retrieveProductSalesByRegionChartData } from '../../services/chart-data-service';
-export interface ProductSalesByRegionChartProps {}
 
-const ProductSalesByRegionChart: React.SFC<ProductSalesByRegionChartProps> = () => {
+const ProductSalesByRegionChart: React.SFC = () => {
   const [data, setData]: [SankeyChartData, Function] = React.useState({
     nodes: [],
     links: [],

@@ -10,12 +10,10 @@ import RevenueTrendByRegionChart from '../RevenueTrendByRegionChart/RevenueTrend
 import ProductSalesByRegionChart from '../ProductSalesByRegionChart/ProductSalesByRegionChart';
 import TopRevenueByRegionChart2 from '../TopRevenueByRegionChart2/TopRevenueByRegionChart2';
 
-export interface DashboardProps {}
-
-const Dashboard: React.SFC<DashboardProps> = () => {
+const Dashboard: React.SFC = () => {
   return (
     <>
-      <div style={{textAlign:'right',padding:'7px 10px 7px 0px'}}>
+      <div style={{ textAlign: 'right', padding: '7px 10px 7px 0px' }}>
         <ToggleTheme />
       </div>
       <GridLayout isDraggable rowHeight={150} width="100%" noOfCols={3}>

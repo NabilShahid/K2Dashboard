@@ -3,9 +3,7 @@ import { PieChart } from '@k2/rv-viz';
 import { PieChartDataUnit } from '../../types/chart-data-types';
 import { retrieveTopRevenueByRegionChartData } from '../../services/chart-data-service';
 
-export interface TopRevenueByRegionProps {}
-
-const TopRevenueByRegion: React.SFC<TopRevenueByRegionProps> = () => {
+const TopRevenueByRegion: React.SFC = () => {
   const [data, setData]: [Array<PieChartDataUnit>, Function] = React.useState(
     []
   );

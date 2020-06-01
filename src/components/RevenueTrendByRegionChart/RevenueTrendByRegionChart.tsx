@@ -3,17 +3,15 @@ import { LineChart } from '@k2/rv-viz';
 import { LineChartDataUnit } from '../../types/chart-data-types';
 import { retrieveRevenueTrendByRegionChartData } from '../../services/chart-data-service';
 
-export interface RevenueTrendByRegionChartProps {}
-
-const RevenueTrendByRegionChart: React.SFC<RevenueTrendByRegionChartProps> = () => {
-    const [data, setData]: [Array<LineChartDataUnit>, Function] = React.useState(
-        []
-      );
-      React.useEffect(() => {
-        retrieveRevenueTrendByRegionChartData().then((data) => {
-          setData(data);
-         });
-      }, []);
+const RevenueTrendByRegionChart: React.SFC = () => {
+  const [data, setData]: [Array<LineChartDataUnit>, Function] = React.useState(
+    []
+  );
+  React.useEffect(() => {
+    retrieveRevenueTrendByRegionChartData().then((data) => {
+      setData(data);
+    });
+  }, []);
   return (
     <LineChart
       crosshair={{

@@ -2,9 +2,8 @@ import * as React from 'react';
 import { ColumnChart } from '@k2/rv-viz';
 import { retrieveBrandEngagementOverviewChartData } from '../../services/chart-data-service';
 import { ColumnChartDataUnit } from '../../types/chart-data-types';
-export interface BrandEngagementOverviewChartProps {}
 
-const BrandEngagementOverviewChart: React.SFC<BrandEngagementOverviewChartProps> = () => {
+const BrandEngagementOverviewChart: React.SFC = () => {
     const [data, setData]: [Array<ColumnChartDataUnit>, Function] = React.useState(
         []
       );
